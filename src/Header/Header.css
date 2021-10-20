@@ -1,3 +1,13 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -5,16 +15,20 @@
   padding: 20px 50px 20px 200px;
 }
 
-.header_logo {
-  width: 201px;  
+.header_logo > img {
+  width: 201px;
   height: 43px;
-  background-image: url('../asset/img/sipang.jpg');
-  background-repeat: no-repeat;
+  /* background-image: url("../asset/img/sipang.jpg"); */
+  /* background-repeat: no-repeat; */
 }
 
-.header_menu {
+.header_menu > ul {
   display: flex;
   gap: 2vw;
-  padding: 0px 6vw 0px 0px;
   font-size: 1vw;
+}
+
+.header_menu > ul > li > a,
+.header_menu > ul > li > a:visited {
+  color: black;
 }
