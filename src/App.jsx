@@ -8,6 +8,7 @@ import Notice from "./Notice/Notice.jsx";
 import Payment from "./Payment/Payment.jsx";
 import LoginBox from "./Login/LoginBox.jsx";
 import SearchBox from "./Search/SearchBox.jsx";
+import MyPage from "./MyPage/MyPage.jsx";
 
 const communityTitle = [
   "배드민턴이 너무 어려워요....",
@@ -24,20 +25,6 @@ const notice = [
 ];
 
 function App() {
-  /* 데이터에서 읽어오니까 state로 만들 필요 없을 거 같아서요! */
-
-  // let [communityTitle, setcommunityTitle] = useState([
-  //   "배드민턴이 너무 어려워요....",
-  //   "이 배드민채 어떤가요?",
-  //   "체육관 너무 좋네요^^",
-  //   "배린이 임니다 ㅎ,,",
-  // ]);
-  // let [notice, setnotice] = useState([
-  //   "배드민턴은 SIPANG...",
-  //   "으음~ 머시따~!",
-  //   "내 집 같은 체육관은 ...",
-  //   "SIPANG 예약 할인 이벤트!",
-  // ]);
 
   return (
     <>
@@ -63,6 +50,11 @@ function App() {
         <Route path="/search">
           <SearchBox />
         </Route>
+
+        <Route path="/my-page">
+          <MyPage />
+        </Route>
+
       </Switch>
 
       <Footer />

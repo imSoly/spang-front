@@ -1,0 +1,117 @@
+.mypage_profile {
+  width: 75.5%;
+  margin: 5em 0 0 12.5em;
+  height: 20em;
+  border-radius: 18px;
+  background-color: #1a72ec;
+  position: relative;
+}
+
+.mypage_img {
+  width: 12em;
+  height: 12em;
+  background-color: #fff;
+  border-radius: 100px;
+  top: 4em;
+  left: 8em;
+  position: absolute;
+}
+
+.mypage_id {
+  font-size: 2rem;
+  font-weight: 500;
+  top: 3em;
+  left: 14.2em;
+  color: #fff;
+  position: absolute;
+}
+
+.mypage_box1 {
+  width: 8em;
+  height: 2.5em;
+  bottom: 4em;
+  right: 20em;
+  border: solid 3px #fff;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 2.5em;
+  position: absolute;
+}
+
+.mypage_box2 {
+  width: 8em;
+  height: 2.5em;
+  bottom: 4em;
+  right: 10em;
+  border: solid 3px #fff;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 2.5em;
+  position: absolute;
+}
+
+.mypage_history_box {
+  width: 75.5%;
+  height: 30em;
+  margin: 5em 0 0 12.5em;
+  border-radius: 18px;
+  background-color: #f2f2f2;
+}
+
+.mypage_history {
+  width: auto;
+  display: flex;
+  gap: 0.8em;
+  margin-left: 5em;
+}
+
+.mypage_future_history1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 2em;
+  color: #212121;
+}
+
+.mypage_future_history2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 2em;
+  color: #212121;
+}
+
+.mypage_gym {
+  display: flex;
+  gap: 0.8em;
+}
+
+.mypage_gym_img {
+  width: 22.5em;
+  height: 14em;
+  margin: 3em 5.5em;
+  border: solid 1px #707070;
+  background-color: #fff;
+}
+
+.mypage_gym_info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.5em;
+  gap: 1.5em;
+}
+
+.mypage_gym_infotext {
+  font-size: 1.5em;
+}
+
+.mypage_gym_cancel {
+  width: 7em;
+  height: 2.5em;
+  background-color: #fff;
+  color: #ff0000;
+  font-size: 1.2rem;
+  border: 0;
+  outline: 0;
+  cursor:pointer
+}
