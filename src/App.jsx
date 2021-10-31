@@ -9,6 +9,7 @@ import Payment from "./Payment/Payment.jsx";
 import LoginBox from "./Login/LoginBox.jsx";
 import SearchBox from "./Search/SearchBox.jsx";
 import MyPage from "./MyPage/MyPage.jsx";
+import MyPagePast from "./MyPage/MyPagePast.jsx";
 
 const communityTitle = [
   "배드민턴이 너무 어려워요....",
@@ -53,6 +54,10 @@ function App() {
 
         <Route path="/my-page">
           <MyPage />
+        </Route>
+
+        <Route path="/my-page-past">
+          <MyPagePast />
         </Route>
 
       </Switch>

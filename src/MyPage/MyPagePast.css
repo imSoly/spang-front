@@ -1,5 +1,5 @@
 @media only screen and (min-width: 1025px) {
-  .mypage_profile {
+  .mypagepast_profile {
     width: 75.5%;
     margin: 5em 0 0 12.5em;
     height: 20em;
@@ -8,7 +8,7 @@
     position: relative;
   }
 
-  .mypage_img {
+  .mypagepast_img {
     width: 12em;
     height: 12em;
     background-color: #fff;
@@ -18,7 +18,7 @@
     position: absolute;
   }
 
-  .mypage_id {
+  .mypagepast_id {
     font-size: 1.9rem;
     font-weight: 500;
     top: 3em;
@@ -27,7 +27,7 @@
     position: absolute;
   }
 
-  .mypage_box1 {
+  .mypagepast_box1 {
     width: 7em;
     height: 2.2em;
     bottom: 4.5em;
@@ -40,7 +40,7 @@
     position: absolute;
   }
 
-  .mypage_box2 {
+  .mypagepast_box2 {
     width: 7em;
     height: 2.2em;
     bottom: 4.5em;
@@ -53,41 +53,41 @@
     position: absolute;
   }
 
-  .mypage_history_box {
+  .mypagepast_history_box {
     width: 75.5%;
-    height: 30em;
+    height: 100%;
     margin: 5em 0 0 12.5em;
     border-radius: 18px;
     background-color: #f2f2f2;
   }
 
-  .mypage_history {
+  .mypagepast_history {
     width: auto;
     display: flex;
     gap: 0.8em;
     margin-left: 5em;
   }
 
-  .mypage_future_history1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 2em;
-    color: #212121;
-  }
-
-  .mypage_future_history2 {
+  .mypagepast_future_history1 {
     font-size: 2rem;
     font-weight: 500;
     margin-top: 2em;
     color: #212121;
   }
 
-  .mypage_gym {
+  .mypagepast_future_history2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2em;
+    color: #212121;
+  }
+
+  .mypagepast_gym {
     display: flex;
     gap: 0.8em;
   }
 
-  .mypage_gym_img {
+  .mypagepast_gym_img {
     width: 22.5em;
     height: 14em;
     margin: 3em 5.5em;
@@ -95,18 +95,18 @@
     background-color: #fff;
   }
 
-  .mypage_gym_info {
+  .mypagepast_gym_info {
     display: flex;
     flex-direction: column;
-    margin-top: 3.5em;
+    margin-top: 5.5em;
     gap: 1.5em;
   }
 
-  .mypage_gym_infotext {
+  .mypagepast_gym_infotext {
     font-size: 1.5em;
   }
 
-  .mypage_gym_cancel {
+  .mypagepast_gym_cancel {
     width: 7em;
     height: 2.5em;
     background-color: #fff;
@@ -119,7 +119,7 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .mypage_profile {
+  .mypagepast_profile {
     width: 75.5%;
     margin: 5em 0 0 7.5em;
     height: 17em;
@@ -128,7 +128,7 @@
     position: relative;
   }
   
-  .mypage_img {
+  .mypagepast_img {
     width: 10em;
     height: 10em;
     background-color: #fff;
@@ -138,7 +138,7 @@
     position: absolute;
   }
   
-  .mypage_id {
+  .mypagepast_id {
     font-size: 1.5rem;
     font-weight: 500;
     top: 3em;
@@ -147,7 +147,7 @@
     position: absolute;
   }
   
-  .mypage_box1 {
+  .mypagepast_box1 {
     width: 7em;
     height: 2em;
     bottom: 8em;
@@ -160,7 +160,7 @@
     position: absolute;
   }
   
-  .mypage_box2 {
+  .mypagepast_box2 {
     width: 5em;
     height: 2em;
     bottom: 8em;
@@ -173,41 +173,41 @@
     position: absolute;
   }
   
-  .mypage_history_box {
+  .mypagepast_history_box {
     width: 75.5%;
-    height: 30em;
+    height: 100%;
     margin: 5em 0 0 7.5em;
     border-radius: 18px;
     background-color: #f2f2f2;
   }
   
-  .mypage_history {
+  .mypagepast_history {
     width: auto;
     display: flex;
     gap: 0.8em;
     margin-left: 4em;
   }
   
-  .mypage_future_history1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: 2em;
-    color: #212121;
-  }
-  
-  .mypage_future_history2 {
+  .mypagepast_future_history1 {
     font-size: 1.5rem;
     font-weight: 500;
     margin-top: 2em;
     color: #212121;
   }
   
-  .mypage_gym {
+  .mypagepast_future_history2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2em;
+    color: #212121;
+  }
+  
+  .mypagepast_gym {
     display: flex;
     gap: 0.6em;
   }
   
-  .mypage_gym_img {
+  .mypagepast_gym_img {
     width: 17.5em;
     height: 12em;
     margin: 3em 1.5em 0 4em;
@@ -215,18 +215,18 @@
     background-color: #fff;
   }
   
-  .mypage_gym_info {
+  .mypagepast_gym_info {
     display: flex;
     flex-direction: column;
     margin-top: 3.5em;
     gap: 1.5em;
   }
   
-  .mypage_gym_infotext {
+  .mypagepast_gym_infotext {
     font-size: 1.2em;
   }
   
-  .mypage_gym_cancel {
+  .mypagepast_gym_cancel {
     width: 5.3em;
     height: 2em;
     background-color: #fff;
@@ -239,7 +239,7 @@
 }
 
 @media only screen and (min-width: 482px) and (max-width: 767px) { 
-  .mypage_profile {
+  .mypagepast_profile {
     width: 75.5%;
     margin: 5em 0 0 5.5em;
     height: 15em;
@@ -248,7 +248,7 @@
     position: relative;
   }
   
-  .mypage_img {
+  .mypagepast_img {
     width: 8em;
     height: 8em;
     background-color: #fff;
@@ -258,7 +258,7 @@
     position: absolute;
   }
   
-  .mypage_id {
+  .mypagepast_id {
     font-size: 0.8rem;
     font-weight: 500;
     top: 5.5em;
@@ -267,7 +267,7 @@
     position: absolute;
   }
   
-  .mypage_box1 {
+  .mypagepast_box1 {
     width: 8em;
     height: 2em;
     bottom: 15em;
@@ -280,7 +280,7 @@
     position: absolute;
   }
   
-  .mypage_box2 {
+  .mypagepast_box2 {
     width: 8em;
     height: 2em;
     bottom: 15em;
@@ -293,41 +293,41 @@
     position: absolute;
   }
   
-  .mypage_history_box {
+  .mypagepast_history_box {
     width: 75.5%;
-    height: 30em;
+    height: 100%;
     margin: 5em 0 0 5.5em;
     border-radius: 18px;
     background-color: #f2f2f2;
   }
   
-  .mypage_history {
+  .mypagepast_history {
     width: auto;
     display: flex;
     gap: 0.8em;
     margin-left: 2em;
   }
   
-  .mypage_future_history1 {
+  .mypagepast_future_history1 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 2em;
+    color: #212121;
+  }
+
+  .mypagepast_future_history2 {
     font-size: 1rem;
     font-weight: bold;
     margin-top: 2em;
     color: #212121;
   }
   
-  .mypage_future_history2 {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-top: 2em;
-    color: #212121;
-  }
-  
-  .mypage_gym {
+  .mypagepast_gym {
     display: flex;
     gap: 0.6em;
   }
   
-  .mypage_gym_img {
+  .mypagepast_gym_img {
     width: 13em;
     height: 8em;
     margin: 2em 1.5em 0 2em;
@@ -335,18 +335,18 @@
     background-color: #fff;
   }
   
-  .mypage_gym_info {
+  .mypagepast_gym_info {
     display: flex;
     flex-direction: column;
     margin-top: 2.5em;
     gap: 1.5em;
   }
   
-  .mypage_gym_infotext {
+  .mypagepast_gym_infotext {
     font-size: 0.5em;
   }
   
-  .mypage_gym_cancel {
+  .mypagepast_gym_cancel {
     width: 7em;
     height: 2em;
     background-color: #fff;

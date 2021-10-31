@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./MyPage.css";
 
 function MyPage(props) {
@@ -11,20 +12,20 @@ function MyPage(props) {
           반가워요! '회원닉네임'님!
         </div>
         <div className="mypage_box1">
-          회원 정보 수정 
+          예약하기
         </div>
         <div className="mypage_box2">
-          예약하기
+          회원정보 수정
         </div>
       </div>
 
       <div className="mypage_history_box">
         <div className="mypage_history">
           <div className="mypage_future_history1">
-            예약내역 /
+            <Link to="/my-page" style={{ color: "black" }}>예약내역 /</Link>
           </div>
           <div className="mypage_future_history2">
-            과거 예약내역
+          <Link to="/my-page-past" style={{ color: "black" }}>과거 예약내역</Link>
           </div>
         </div>
         <div className="mypage_gym">
