@@ -1,11 +1,28 @@
-import React, { useState, useHistory } from "react";
+import React, { useState, useHistory, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
+import axios from "axios";
 
 function LoginBox() {
   const [mode, setMode] = useState("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  // useEffect(() => {
+  //   axios
+  //     .post("/api", {
+  //       id: "bla",
+  //       pw: 1234,
+  //     })
+  //     .then(function (response) {
+  //       console.log("response");
+  //       console.log(response);
+  //     })
+  //     .catch(function (error) {
+  //       console.log("error");
+  //       console.log(error.response.data);
+  //     });
+  // }, []);
 
   const onChange = (event) => {
     const {
@@ -33,6 +50,8 @@ function LoginBox() {
     // setPassword("");
     // console.log(email, password);
   };
+
+  // const backUrl = "http://e2bf-222-234-150-89.ngrok.io";
 
   return (
     <section>
