@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename="/spang-front">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
