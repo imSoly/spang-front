@@ -1,3 +1,3 @@
 # Smash Pang!
 
-hello
+link : https://spang.netlify.app/
