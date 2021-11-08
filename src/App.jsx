@@ -5,11 +5,16 @@ import Header from "./Header/Header.jsx";
 import Footer from "./Footer/Footer.jsx";
 import Main from "./Main/Main.jsx";
 import Notice from "./Notice/Notice.jsx";
+import NoticeView from "./Notice/NoticeView.jsx";
+import NoticeWrite from "./Notice/NoticeWrite.jsx";
 import Payment from "./Payment/Payment.jsx";
 import LoginBox from "./Login/LoginBox.jsx";
 import SearchBox from "./Search/SearchBox.jsx";
 import MyPage from "./MyPage/MyPage.jsx";
 import MyPagePast from "./MyPage/MyPagePast.jsx";
+import Community from "./Community/Community.jsx";
+import CommunityView from "./Community/CommunityView.jsx";
+import CommunityWrite from "./Community/CommunityWrite.jsx";
 
 const communityTitle = [
   "배드민턴이 너무 어려워요....",
@@ -44,6 +49,14 @@ function App() {
           <Notice />
         </Route>
 
+        <Route path="/notice-view">
+          <NoticeView />
+        </Route>
+
+        <Route path="/notice-write">
+          <NoticeWrite />
+        </Route>
+
         <Route path="/login">
           <LoginBox />
         </Route>
@@ -60,6 +73,17 @@ function App() {
           <MyPagePast />
         </Route>
 
+        <Route path="/community">
+          <Community />
+        </Route>
+
+        <Route path="/community-view">
+          <CommunityView />
+        </Route>
+
+        <Route path="/community-write">
+          <CommunityWrite />
+        </Route>
       </Switch>
 
       <Footer />

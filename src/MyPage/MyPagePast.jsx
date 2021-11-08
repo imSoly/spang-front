@@ -29,16 +29,18 @@ function MyPagePast(props) {
           </div>
         </div>
         <div>
-          {[1, 2, 3, 4].map(function (a, i) {
+          {[1, 2, 3, 4].map(function(a, i) {
             return (
-              <div className="mypagepast_gym">
-                <div className="mypagepast_gym_img"></div>
-                <div className="mypagepast_gym_info">
-                  <div className="mypagepast_gym_infotext">체육관 : 우리동네 체육관</div>
-                  <div className="mypagepast_gym_infotext">시간 : 11:30</div>
-                  <div className="mypagepast_gym_infotext">금액 : 23,000원</div>
+              <>
+                <div className="mypagepast_gym">
+                  <div className="mypagepast_gym_img"></div>
+                  <div className="mypagepast_gym_info">
+                    <div className="mypagepast_gym_infotext">체육관 : 우리동네 체육관</div>
+                    <div className="mypagepast_gym_infotext">시간 : 11:30</div>
+                    <div className="mypagepast_gym_infotext">금액 : 23,000원</div>
+                  </div>
                 </div>
-              </div>
+              </>
             );
           })}
         </div>
