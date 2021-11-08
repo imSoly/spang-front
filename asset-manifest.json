@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/spang-front/static/css/main.bf2541ae.chunk.css",
+    "main.js": "/spang-front/static/js/main.73aafd7c.chunk.js",
+    "main.js.map": "/spang-front/static/js/main.73aafd7c.chunk.js.map",
+    "runtime-main.js": "/spang-front/static/js/runtime-main.26c5cd8c.js",
+    "runtime-main.js.map": "/spang-front/static/js/runtime-main.26c5cd8c.js.map",
+    "static/js/2.fe563322.chunk.js": "/spang-front/static/js/2.fe563322.chunk.js",
+    "static/js/2.fe563322.chunk.js.map": "/spang-front/static/js/2.fe563322.chunk.js.map",
+    "index.html": "/spang-front/index.html",
+    "static/css/main.bf2541ae.chunk.css.map": "/spang-front/static/css/main.bf2541ae.chunk.css.map",
+    "static/js/2.fe563322.chunk.js.LICENSE.txt": "/spang-front/static/js/2.fe563322.chunk.js.LICENSE.txt",
+    "static/media/sipang.beb3da62.jpg": "/spang-front/static/media/sipang.beb3da62.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.26c5cd8c.js",
+    "static/js/2.fe563322.chunk.js",
+    "static/css/main.bf2541ae.chunk.css",
+    "static/js/main.73aafd7c.chunk.js"
+  ]
+}
