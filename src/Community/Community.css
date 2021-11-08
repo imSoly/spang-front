@@ -1,4 +1,4 @@
-.notice_name {
+.community_name {
   margin: 1em 0em 1em 6em;
   font-size: 32px;
   font-weight: bold;
@@ -6,52 +6,52 @@
   color: #262626;
 }
 
-.notice_line {
+.community_line {
   width: 76%;
   height: 4px;
   margin: 1em 0 1em 12em;
   background-color: #707070;
 }
 
-.notice_lists {
+.community_lists {
   display: flex;
   flex-direction: row;
 }
 
-.notice_lists_title {
+.community_lists_title {
   margin-left: 12em;
   font-size: 1.2rem;
   font-weight: 600;
   color: #353535;
 }
 
-.notice_lists_date {
+.community_lists_date {
   margin-left: 38.5em;
   font-size: 1.2rem;
   font-weight: 600;
   color: #353535;
 }
 
-.notice_lists_hits {
+.community_lists_hits {
   margin-left: 3em;
   font-size: 1.2rem;
   font-weight: 600;
   color: #353535;
 }
 
-.notice_lists_like {
+.community_lists_like {
   margin-left: 3em;
   font-size: 1.2rem;
   font-weight: 600;
   color: #353535;
 }
 
-.notice_content {
+.community_content {
   display: flex;
   flex-direction: row;
 }
 
-.notice_content_title {
+.community_content_title {
   width: 43em;
   margin-left: 13em;
   font-size: 1.1rem;
@@ -59,7 +59,7 @@
   color: #353535;
 }
 
-.notice_content_date {
+.community_content_date {
   width: 5em;
   margin-left: 0.5em;
   font-size: 1.1rem;
@@ -68,7 +68,7 @@
   text-align: center;
 }
 
-.notice_content_hits {
+.community_content_hits {
   width: 4em;
   margin-left: 2em;
   font-size: 1.1rem;
@@ -77,7 +77,7 @@
   text-align: center;
 }
 
-.notice_content_like {
+.community_content_like {
   width: 4em;
   margin-left: 2.5em;
   font-size: 1.1rem;
@@ -86,7 +86,7 @@
   text-align: center;
 }
 
-.notice_content_line {
+.community_content_line {
   width: 76%;
   height: 2px;
   margin: 1em 0 1em 12em;
