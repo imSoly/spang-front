@@ -1,6 +1,12 @@
 import React, { useState, useHistory, useEffect } from "react";
+import NaverLogin from "react-naver-login";
+import GoogleLogin from "react-google-login";
+import KakaoLogin from "react-kakao-login";
 import { Link } from "react-router-dom";
 import "./Login.css";
+import NaverLogo from "../img/naverLogo.png";
+import GoogleLogo from "../img/googleLogo.png";
+import KakaoLogo from "../img/kakaoLogo.png";
 import axios from "axios";
 
 function LoginBox() {
@@ -51,7 +57,13 @@ function LoginBox() {
     // console.log(email, password);
   };
 
-  // const backUrl = "http://e2bf-222-234-150-89.ngrok.io";
+  const responseGoogle = (response) => {
+    console.log(response);
+  };
+
+  const responseKakao = (response) => {
+    console.log(response);
+  };
 
   return (
     <section>
@@ -96,13 +108,51 @@ function LoginBox() {
                 또는
                 <ul>
                   <li>
-                    <button>Google</button>
+                    <GoogleLogin
+                      clientId={process.env.REACT_APP_GOOGLE_API_KEY}
+                      render={(renderProps) => (
+                        <button
+                          className="btn_login_google"
+                          onClick={renderProps.onClick}
+                          disabled={renderProps.disabled}
+                        >
+                          <img alt="login with google" src={GoogleLogo} />
+                        </button>
+                      )}
+                      buttonText="Login"
+                      onSuccess={responseGoogle}
+                      onFailure={responseGoogle}
+                      cookiePolicy={"single_host_origin"}
+                    />
                   </li>
                   <li>
-                    <button>Naver</button>
+                    <NaverLogin
+                      clientId={process.env.REACT_APP_NAVER_API_KEY}
+                      callBackUrl="http://localhost:3000"
+                      render={(renderProps) => (
+                        <button
+                          className="btn_login_naver"
+                          onClick={renderProps.onClick}
+                        >
+                          <img alt="login with naver" src={NaverLogo} />
+                        </button>
+                      )}
+                    />
                   </li>
                   <li>
-                    <button>Kakao</button>
+                    <KakaoLogin
+                      token={process.env.REACT_APP_KAKAO_API_KEY}
+                      onSuccess={responseKakao}
+                      onFail={responseKakao}
+                      onLogout={responseKakao}
+                      render={({ onClick }) => {
+                        return (
+                          <button className="btn_login_kakao" onClick={onClick}>
+                            <img alt="login with kakao" src={KakaoLogo} />
+                          </button>
+                        );
+                      }}
+                    />
                   </li>
                 </ul>
                 <p>소셜 네트워크로 로그인하세요.</p>

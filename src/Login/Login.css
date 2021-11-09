@@ -88,3 +88,36 @@
   width: 44px;
   height: 44px;
 }
+
+/* social login button */
+.btn_login_google {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+}
+
+.btn_login_google > img {
+  width: 100%;
+}
+
+.btn_login_kakao {
+  all: unset;
+  cursor: pointer;
+  background-color: #ffe812;
+  border-radius: 12px;
+  width: 44px;
+}
+
+.btn_login_kakao > img {
+  width: 100%;
+}
+
+.btn_login_naver {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+}
+
+.btn_login_naver > img {
+  width: 100%;
+}
