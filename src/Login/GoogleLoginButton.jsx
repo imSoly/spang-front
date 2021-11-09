@@ -1,6 +1,6 @@
 import React from "react";
 import GoogleLogin from "react-google-login";
-import GoogleLogo from "../img/googleLogo.png";
+import GoogleLogo from "../asset/img/googleLogo.png";
 
 const GoogleLoginButton = () => {
   const responseGoogle = (response) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import KakaoLogin from "react-kakao-login";
-import KakaoLogo from "../img/kakaoLogo.png";
+import KakaoLogo from "../asset/img/kakaoLogo.png";
 
 const KakaoLoginButton = () => {
   const responseKakao = (response) => {
