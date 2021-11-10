@@ -69,14 +69,44 @@
     text-align: center;
   }
   
-  .main_banner_box {
-    background-color: #1a72ec;
+   .main_reservation {
     width: 75%;
-    height: 14em;
-    margin: 2em 0 0.5em 12em;
+    height: 16em;
     border-radius: 8px;
-    color: white;
-    font-weight: 500;
+    margin: 9em 0 2em 12em;
+    background-color: #1a72ec;
+    position: relative;
+  }
+  
+  .main_reservation_text1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 2.4em;
+    left: 4em;
+  }
+  
+  .main_reservation_text2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    bottom: 2.4em;
+    left: 11em;
+  }
+
+  .main_reservation > button {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 9em;
+    height: 2.5em;
+    top: 2.7em;
+    right: 3em;
+    border-radius: 18px;
+    border: #fff;
+    background-image: linear-gradient(to right, #fff 4%, #c4dbff 50%, #9cc1f8);
+    position: absolute;
   }
   
   .main_twobox {
@@ -106,8 +136,9 @@
   .main_community_title, .main_notice_title {
     font-size: 2rem;
     font-weight: bold;
+    color: black;
   }
-  
+
   .main_community_content, .main_notice_content {
     margin: 0 0 0 1.1em;
   }

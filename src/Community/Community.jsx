@@ -13,7 +13,7 @@ function Community() {
       <>
         <div>
           <div className="community_name">
-            공지사항
+            커뮤니티
           </div>
 
           <div>
