@@ -23,7 +23,7 @@ const communityTitle = [
   "배린이 임니다 ㅎ,,",
 ];
 
-const notice = [
+const noticeTitle = [
   "배드민턴은 SIPANG...",
   "으음~ 머시따~!",
   "내 집 같은 체육관은 ...",
@@ -38,7 +38,7 @@ function App() {
 
       <Switch>
         <Route exact path="/">
-          <Main communityTitle={communityTitle} notice={notice} />
+          <Main communityTitle={communityTitle} noticeTitle={noticeTitle} />
         </Route>
 
         <Route path="/payment">

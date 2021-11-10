@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Main.css";
 
 function Main(props) {
@@ -51,11 +52,15 @@ function Main(props) {
         </div>
       </div>
 
-      <div className="main_banner_box">
+      <div className="main_reservation">
         {/* <p className="main_reservation_text1">그곳이 어디든 그곳이 몇시던</p> */}
-        <p>그곳이 어디든 그곳이 몇시던</p>
-        <p>언제 어디서든! SPANG!</p>
-        <button>예약하기</button>
+        <div className="main_reservation_text1">
+          <p>그곳이 어디든 그곳이 몇시던</p>
+        </div>
+        <div className="main_reservation_text2">
+          <p>언제 어디서든! SPANG!</p>
+        </div>
+        <button><Link to="/search">예약하기</Link></button>
       </div>
 
       <div className="main_twobox">
@@ -67,7 +72,7 @@ function Main(props) {
                 <div key={i} className="main_community_content">
                   <p className="main_community_content_title">
                     {" "}
-                    {props.communityTitle[i]}
+                    <Link to="/community">{props.communityTitle[i]}</Link>
                   </p>
                   <p className="main_community_content_time">{i + 1}분 전</p>
                   <div className="main_line"></div>
@@ -84,7 +89,7 @@ function Main(props) {
                 <div key={i} className="main_notice_content">
                   <p className="main_notice_content_title">
                     {" "}
-                    {props.notice[i]}
+                    <Link to="/notice">{props.noticeTitle[i]}</Link>
                   </p>
                   <p className="main_notice_content_time">{i + 1}분 전</p>
                   <div className="main_line"></div>
