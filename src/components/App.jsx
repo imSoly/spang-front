@@ -10,7 +10,7 @@ import NoticeWrite from "components/notice/NoticeWrite.jsx";
 import Payment from "components/Payment.jsx";
 import LoginBox from "components/login/LoginBox.jsx";
 import SearchBox from "components/search/SearchBox.jsx";
-import MyPage from "components/myPage/MyPage.jsx";
+import MyPage from "components/MyPage.jsx";
 import Community from "components/community/Community.jsx";
 import CommunityView from "components/community/CommunityView.jsx";
 import CommunityWrite from "components/community/CommunityWrite.jsx";
