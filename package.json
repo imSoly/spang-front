@@ -26,7 +26,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "proxy": "http://e2bf-222-234-150-89.ngrok.io",
   "eslintConfig": {
     "extends": [
       "react-app",

@@ -1,20 +1,19 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import "./App.css";
-import Header from "./Header/Header.jsx";
-import Footer from "./Footer/Footer.jsx";
-import Main from "./Main/Main.jsx";
-import Notice from "./Notice/Notice.jsx";
-import NoticeView from "./Notice/NoticeView.jsx";
-import NoticeWrite from "./Notice/NoticeWrite.jsx";
-import Payment from "./Payment/Payment.jsx";
-import LoginBox from "./Login/LoginBox.jsx";
-import SearchBox from "./Search/SearchBox.jsx";
-import MyPage from "./MyPage/MyPage.jsx";
-import MyPagePast from "./MyPage/MyPagePast.jsx";
-import Community from "./Community/Community.jsx";
-import CommunityView from "./Community/CommunityView.jsx";
-import CommunityWrite from "./Community/CommunityWrite.jsx";
+import "css/App.css";
+import Header from "components/Header.jsx";
+import Footer from "components/Footer.jsx";
+import Main from "components/Main.jsx";
+import Notice from "components/notice/Notice.jsx";
+import NoticeView from "components/notice/NoticeView.jsx";
+import NoticeWrite from "components/notice/NoticeWrite.jsx";
+import Payment from "components/Payment.jsx";
+import LoginBox from "components/login/LoginBox.jsx";
+import SearchBox from "components/search/SearchBox.jsx";
+import MyPage from "components/myPage/MyPage.jsx";
+import Community from "components/community/Community.jsx";
+import CommunityView from "components/community/CommunityView.jsx";
+import CommunityWrite from "components/community/CommunityWrite.jsx";
 
 const communityTitle = [
   "배드민턴이 너무 어려워요....",
@@ -31,7 +30,6 @@ const noticeTitle = [
 ];
 
 function App() {
-
   return (
     <>
       <Header />
@@ -67,10 +65,6 @@ function App() {
 
         <Route path="/my-page">
           <MyPage />
-        </Route>
-
-        <Route path="/my-page-past">
-          <MyPagePast />
         </Route>
 
         <Route path="/community">

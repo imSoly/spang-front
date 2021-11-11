@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Main.css";
+import "css/Main.css";
 
 function Main(props) {
   const rankingData = ["성남체육관", "압구정체육관", "신사체육관"];
@@ -60,7 +60,9 @@ function Main(props) {
         <div className="main_reservation_text2">
           <p>언제 어디서든! SPANG!</p>
         </div>
-        <button><Link to="/search">예약하기</Link></button>
+        <button>
+          <Link to="/search">예약하기</Link>
+        </button>
       </div>
 
       <div className="main_twobox">

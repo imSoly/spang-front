@@ -1,62 +1,70 @@
 @media only screen and (min-width: 1025px) {
-  .mypage_profile {
-    width: 75.5%;
-    margin: 5em 0 0 12.5em;
-    height: 20em;
-    border-radius: 18px;
-    background-color: #1a72ec;
-    position: relative;
+  .mypage_container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 0;
   }
 
-  .mypage_img {
+  /* Profile */
+  .mypage_profile {
+    background-color: #1a72ec;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 75.5%;
+    padding: 62px 100px;
+    border-radius: 18px;
+  }
+
+  .profile_left > img {
+    border-radius: 100px;
     width: 12em;
     height: 12em;
-    background-color: #fff;
-    border-radius: 100px;
-    top: 4em;
-    left: 8em;
-    position: absolute;
   }
 
-  .mypage_id {
+  .profile_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .profile_right > p {
     font-size: 1.9rem;
     font-weight: 500;
-    top: 3em;
-    left: 12.2em;
     color: #fff;
-    position: absolute;
   }
 
-  .mypage_box1 {
-    width: 7em;
-    height: 2.2em;
-    bottom: 4.5em;
-    left: 23.5em;
+  .profile_right > div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .profile_right > div > button {
+    all: unset;
+    cursor: pointer;
+    min-width: 200px;
     border: solid 3px #fff;
+    padding: 15px 22px;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.625rem;
     text-align: center;
-    line-height: 2.3em;
-    position: absolute;
   }
 
-  .mypage_box2 {
-    width: 7em;
-    height: 2.2em;
-    bottom: 4.5em;
-    left: 15.5em;
-    border: solid 3px #fff;
-    color: #fff;
-    font-size: 1.5rem;
-    text-align: center;
-    line-height: 2.3em;
-    position: absolute;
+  .profile_right > div > button:nth-child(1) {
+    margin-right: 30px;
   }
 
+  /* 예약 내역 */
   .mypage_history_box {
+    margin: 0 auto;
+    margin-top: 70px;
     width: 75.5%;
     height: 30em;
-    margin: 5em 0 0 12.5em;
     border-radius: 18px;
     background-color: #f2f2f2;
   }
@@ -66,6 +74,10 @@
     display: flex;
     gap: 0.8em;
     margin-left: 5em;
+  }
+
+  .history_mode {
+    font-weight: 500;
   }
 
   .mypage_future_history1 {
@@ -114,7 +126,7 @@
     font-size: 1.2rem;
     border: 0;
     outline: 0;
-    cursor:pointer
+    cursor: pointer;
   }
 }
 
@@ -127,7 +139,7 @@
     background-color: #1a72ec;
     position: relative;
   }
-  
+
   .mypage_img {
     width: 10em;
     height: 10em;
@@ -137,7 +149,7 @@
     left: 6em;
     position: absolute;
   }
-  
+
   .mypage_id {
     font-size: 1.5rem;
     font-weight: 500;
@@ -146,7 +158,7 @@
     color: #fff;
     position: absolute;
   }
-  
+
   .mypage_box1 {
     width: 7em;
     height: 2em;
@@ -159,7 +171,7 @@
     line-height: 2em;
     position: absolute;
   }
-  
+
   .mypage_box2 {
     width: 5em;
     height: 2em;
@@ -172,7 +184,7 @@
     line-height: 2em;
     position: absolute;
   }
-  
+
   .mypage_history_box {
     width: 75.5%;
     height: 30em;
@@ -180,33 +192,33 @@
     border-radius: 18px;
     background-color: #f2f2f2;
   }
-  
+
   .mypage_history {
     width: auto;
     display: flex;
     gap: 0.8em;
     margin-left: 4em;
   }
-  
+
   .mypage_future_history1 {
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 2em;
     color: #212121;
   }
-  
+
   .mypage_future_history2 {
     font-size: 1.5rem;
     font-weight: 500;
     margin-top: 2em;
     color: #212121;
   }
-  
+
   .mypage_gym {
     display: flex;
     gap: 0.6em;
   }
-  
+
   .mypage_gym_img {
     width: 17.5em;
     height: 12em;
@@ -214,18 +226,18 @@
     border: solid 1px #707070;
     background-color: #fff;
   }
-  
+
   .mypage_gym_info {
     display: flex;
     flex-direction: column;
     margin-top: 3.5em;
     gap: 1.5em;
   }
-  
+
   .mypage_gym_infotext {
     font-size: 1.2em;
   }
-  
+
   .mypage_gym_cancel {
     width: 5.3em;
     height: 2em;
@@ -234,11 +246,11 @@
     font-size: 1rem;
     border: 0;
     outline: 0;
-    cursor:pointer
+    cursor: pointer;
   }
 }
 
-@media only screen and (min-width: 482px) and (max-width: 767px) { 
+@media only screen and (min-width: 482px) and (max-width: 767px) {
   .mypage_profile {
     width: 75.5%;
     margin: 5em 0 0 5.5em;
@@ -247,7 +259,7 @@
     background-color: #1a72ec;
     position: relative;
   }
-  
+
   .mypage_img {
     width: 8em;
     height: 8em;
@@ -257,7 +269,7 @@
     left: 4em;
     position: absolute;
   }
-  
+
   .mypage_id {
     font-size: 0.8rem;
     font-weight: 500;
@@ -266,7 +278,7 @@
     color: #fff;
     position: absolute;
   }
-  
+
   .mypage_box1 {
     width: 8em;
     height: 2em;
@@ -279,7 +291,7 @@
     line-height: 2em;
     position: absolute;
   }
-  
+
   .mypage_box2 {
     width: 8em;
     height: 2em;
@@ -292,7 +304,7 @@
     line-height: 2em;
     position: absolute;
   }
-  
+
   .mypage_history_box {
     width: 75.5%;
     height: 30em;
@@ -300,33 +312,33 @@
     border-radius: 18px;
     background-color: #f2f2f2;
   }
-  
+
   .mypage_history {
     width: auto;
     display: flex;
     gap: 0.8em;
     margin-left: 2em;
   }
-  
+
   .mypage_future_history1 {
     font-size: 1rem;
     font-weight: bold;
     margin-top: 2em;
     color: #212121;
   }
-  
+
   .mypage_future_history2 {
     font-size: 1rem;
     font-weight: 500;
     margin-top: 2em;
     color: #212121;
   }
-  
+
   .mypage_gym {
     display: flex;
     gap: 0.6em;
   }
-  
+
   .mypage_gym_img {
     width: 13em;
     height: 8em;
@@ -334,18 +346,18 @@
     border: solid 1px #707070;
     background-color: #fff;
   }
-  
+
   .mypage_gym_info {
     display: flex;
     flex-direction: column;
     margin-top: 2.5em;
     gap: 1.5em;
   }
-  
+
   .mypage_gym_infotext {
     font-size: 0.5em;
   }
-  
+
   .mypage_gym_cancel {
     width: 7em;
     height: 2em;
@@ -354,6 +366,6 @@
     font-size: 0.5rem;
     border: 0;
     outline: 0;
-    cursor:pointer
+    cursor: pointer;
   }
 }

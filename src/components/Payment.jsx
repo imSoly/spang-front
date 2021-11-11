@@ -1,6 +1,6 @@
 // import { getByDisplayValue } from '@testing-library/dom';
 import React, { useState } from "react";
-import "./Payment.css";
+import "css/Payment.css";
 
 function Payment() {
   const selectList = ["결제수단", "카드결제", "계좌이체"];
