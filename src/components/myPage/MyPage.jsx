@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "css/MyPage.css";
 
 function MyPage(props) {
@@ -10,7 +10,6 @@ function MyPage(props) {
     } else if (historyMode === "past") {
       setHistoryMode("present");
     }
-    console.log(e.target.classList);
   };
 
   const onClick = (e) => {
@@ -34,19 +33,9 @@ function MyPage(props) {
 
       <section className="mypage_history_box">
         <ul className="mypage_history">
-          <li
-            className={`${historyMode === "past" ? "history_mode" : ""}`}
-            onClick={changeHistoryMode}
-          >
-            과거 예약내역
-          </li>
+          <li onClick={changeHistoryMode}>과거 예약내역</li>
           <li> / </li>
-          <li
-            className={`${historyMode === "present" ? "history_mode" : ""}`}
-            onClick={changeHistoryMode}
-          >
-            예약내역
-          </li>
+          <li onClick={changeHistoryMode}>예약내역</li>
         </ul>
         <div className="mypage_gym">
           <div className="mypage_gym_img"></div>
