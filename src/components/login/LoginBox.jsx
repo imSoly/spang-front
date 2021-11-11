@@ -1,6 +1,6 @@
 import React, { useState, useHistory, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Login.css";
+import "css/Login.css";
 import NaverLoginButton from "./NaverLoginButton";
 import GoogleLoginButton from "./GoogleLoginButton";
 import KakaoLoginButton from "./KakaoLoginButton";

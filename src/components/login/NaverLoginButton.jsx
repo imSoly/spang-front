@@ -1,6 +1,6 @@
 import React from "react";
 import NaverLogin from "react-naver-login";
-import NaverLogo from "../asset/img/naverLogo.png";
+import NaverLogo from "asset/img/naverLogo.png";
 
 const NaverLoginButton = () => {
   return (
