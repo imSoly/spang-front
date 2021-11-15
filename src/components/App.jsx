@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Route, Switch } from "react-router-dom";
+import { getUser } from "api";
 import "css/App.css";
 import Header from "components/Header.jsx";
 import Footer from "components/Footer.jsx";
@@ -9,6 +10,8 @@ import NoticeView from "components/notice/NoticeView.jsx";
 import NoticeWrite from "components/notice/NoticeWrite.jsx";
 import Payment from "components/Payment.jsx";
 import LoginBox from "components/login/LoginBox.jsx";
+import LoginBoxCopy from "components/login/LoginBoxCopy.jsx";
+import SignupForm from "components/login/SignupForm.jsx";
 import SearchBox from "components/search/SearchBox.jsx";
 import MyPage from "components/MyPage.jsx";
 import Community from "components/community/Community.jsx";
@@ -30,6 +33,26 @@ const noticeTitle = [
 ];
 
 function App() {
+
+  const [userInfo, setUserInfo] = useState({})
+  
+  const patchUserInfo = useCallback(
+    async () => {
+      try {
+        const { data } = await getUser()
+        setUserInfo(data)
+        console.log(data);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    [],
+  )
+
+  useEffect(() => {
+    patchUserInfo()
+  }, [userInfo, patchUserInfo])
+
   return (
     <>
       <Header />
@@ -55,9 +78,18 @@ function App() {
           <NoticeWrite />
         </Route>
 
-        <Route path="/login">
+        <Route path="/logins">
           <LoginBox />
         </Route>
+
+        <Route path="/login">
+          <LoginBoxCopy />
+        </Route>
+
+        <Route path="/signup">
+          <SignupForm />
+        </Route>
+
         {/* <Route path="/join"><JoinBox /></Route> */}
         <Route path="/search">
           <SearchBox />

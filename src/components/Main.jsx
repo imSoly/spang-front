@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import userInfo from 'api';
 import "css/Main.css";
 
 function Main(props) {
