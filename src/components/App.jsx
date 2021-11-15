@@ -33,25 +33,21 @@ const noticeTitle = [
 ];
 
 function App() {
+  const [userInfo, setUserInfo] = useState({});
 
-  const [userInfo, setUserInfo] = useState({})
-  
-  const patchUserInfo = useCallback(
-    async () => {
-      try {
-        const { data } = await getUser()
-        setUserInfo(data)
-        console.log(data);
-      } catch (error) {
-        console.error(error);
-      }
-    },
-    [],
-  )
+  const patchUserInfo = useCallback(async () => {
+    try {
+      const { data } = await getUser();
+      setUserInfo(data);
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  }, []);
 
   useEffect(() => {
-    patchUserInfo()
-  }, [userInfo, patchUserInfo])
+    patchUserInfo();
+  }, [userInfo, patchUserInfo]);
 
   return (
     <>

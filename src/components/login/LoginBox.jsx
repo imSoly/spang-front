@@ -11,19 +11,23 @@ function LoginBox() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // const url = "http://ae67-222-234-150-89.ngrok.io/";
+
   // useEffect(() => {
   //   axios
-  //     .post("/api", {
-  //       id: "bla",
-  //       pw: 1234,
+  //     .get(url, {
+  //       params: {
+  //         id: 123,
+  //       },
   //     })
   //     .then(function (response) {
-  //       console.log("response");
-  //       console.log(response);
+  //       console.log("성공");
   //     })
   //     .catch(function (error) {
-  //       console.log("error");
-  //       console.log(error.response.data);
+  //       console.log("실패");
+  //     })
+  //     .then(function () {
+  //       console.log("end");
   //     });
   // }, []);
 
