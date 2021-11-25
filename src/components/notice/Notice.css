@@ -26,21 +26,21 @@
 }
 
 .notice_lists_date {
-  margin-left: 38.5em;
+  margin-left: 34em;
   font-size: 1.2rem;
   font-weight: 600;
   color: #353535;
 }
 
 .notice_lists_hits {
-  margin-left: 3em;
+  margin-left: 6.5em;
   font-size: 1.2rem;
   font-weight: 600;
   color: #353535;
 }
 
 .notice_lists_like {
-  margin-left: 3em;
+  margin-left: 4em;
   font-size: 1.2rem;
   font-weight: 600;
   color: #353535;
@@ -52,16 +52,16 @@
 }
 
 .notice_content_title {
-  width: 43em;
-  margin-left: 13em;
+  width: 30em;
+  margin-left: 1em;
   font-size: 1.1rem;
   font-weight: 500;
   color: #353535;
 }
 
 .notice_content_date {
-  width: 5em;
-  margin-left: 0.5em;
+  width: 8em;
+  /* margin-left: 0.5em; */
   font-size: 1.1rem;
   font-weight: 500;
   color: #353535;
@@ -69,8 +69,8 @@
 }
 
 .notice_content_hits {
-  width: 4em;
-  margin-left: 2em;
+  width: 2em;
+  /* margin-left: 0.5em; */
   font-size: 1.1rem;
   font-weight: 500;
   color: #353535;
@@ -78,8 +78,8 @@
 }
 
 .notice_content_like {
-  width: 4em;
-  margin-left: 2.5em;
+  width: 2em;
+  /* margin-left: 0.5em; */
   font-size: 1.1rem;
   font-weight: 500;
   color: #353535;

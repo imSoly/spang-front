@@ -22,4 +22,20 @@ function getUser() {
   return axios.get('/user')
 }
 
-export { signUpUser, loginUser, getUser }
+function searchGym(payload) {
+  return axios.get(`/gym/${payload}`)
+}
+
+function createNoticePost(noticeInfo) {
+	return axios.post('/board', noticeInfo)
+}
+
+function patchNoticePost() {
+  return axios.get('/board')
+}
+
+function patchNoticeOnePost(id) {
+  return axios.get(`/board/${id}`)
+}
+
+export { signUpUser, loginUser, getUser, searchGym, createNoticePost, patchNoticePost, patchNoticeOnePost }

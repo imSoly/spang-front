@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import userInfo from 'api';
 import "css/Main.css";
+import GymSearch from "./search/GymSearch";
 
 function Main(props) {
   const rankingData = ["성남체육관", "압구정체육관", "신사체육관"];
@@ -24,9 +24,7 @@ function Main(props) {
     <>
       <div className="search">
         <div className="main_img"></div>
-        <div className="main_search">
-          <input placeholder="지역명 / 체육관명을 검색해주세요!" />
-        </div>
+        <GymSearch />
       </div>
 
       <div>

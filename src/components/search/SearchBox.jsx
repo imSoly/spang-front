@@ -3,6 +3,7 @@ import "./search.css";
 import ShowInfo from "./ShowInfo.jsx";
 import Map from "./Map";
 import SelectTime from "./SelectTime.jsx";
+import GymSearch from "components/search/GymSearch"
 
 let facility = {
   name: "",
@@ -29,11 +30,7 @@ function SearchBox(props) {
 
   return (
     <section className="search_contents">
-      <input
-        className="search_box"
-        type="text"
-        placeholder="검색어를 입력하세요."
-      />
+      <GymSearch />
       <div className="map">
         <Map />
       </div>

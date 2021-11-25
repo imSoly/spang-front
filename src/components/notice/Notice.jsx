@@ -1,14 +1,37 @@
 import { getByDisplayValue } from '@testing-library/dom';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { patchNoticePost } from '../../api';
 import './Notice.css';
 
 function Notice() {
+  const { id } = useParams();
+  const [noticeId, setNoticeId] = useState([]);
+  const [noticeTitle, setNoticeTitle] = useState([]);
+  const [noticeDate, setNoticeDate] = useState([]);
+  const [noticeHits, setNoticeHits] = useState([]);
+  const [noticeLike, setNoticeLike] = useState([]);
 
-  const [title, settitle] = useState(['배드민턴... 너무 어려워요...', '이 배드민채 어떤가요?', '체육관 너무 좋네요^^']);
-  const [date, setdate] = useState(['1분전', '11분전', '12분전']);
-  const [hits, sethits] = useState(['1', '2', '3']);
-  const [like, setlike] = useState(['4', '5', '6']);
+  const noticePost = useCallback(
+    async () => {
+      try {
+        const { data } = await patchNoticePost()
+        setNoticeId(data.map(v => v._id))
+        setNoticeTitle(data.map(v => v.title))
+        setNoticeDate(data.map(v => v.date))
+        setNoticeHits(data.map(v => v.hits))
+        setNoticeLike(data.map(v => v.like))
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    [],
+  )
 
+  useEffect(() => {
+    noticePost()
+  }, [noticePost])
+  
   return(
       <>
         <div>
@@ -36,21 +59,21 @@ function Notice() {
           </div>
 
           <div>
-            {title.map(function(a, i) {
+            {noticeTitle.map((a, i) => {
               return (
                 <>
                   <div className="notice_content">
                     <div className="notice_content_title">
-                      {title[i]}
+                      <Link to={`/notice-view/${ noticeId[i] }`}>{noticeTitle[i]}</Link>
                     </div>
                     <div className="notice_content_date">
-                      {date[i]}
+                      {noticeDate[i]}
                     </div>
                     <div className="notice_content_hits">
-                      {hits[i]}
+                      {noticeHits[i]}
                     </div>
                     <div className="notice_content_like">
-                      {like[i]}
+                      {noticeLike[i]}
                     </div>
                   </div>
                   <div className="notice_content_line"></div>
@@ -62,6 +85,8 @@ function Notice() {
           <div className="pagination">
             1 2 3 4
           </div>
+
+          <button><Link to="/notice-write">글쓰기</Link></button>
         </div>
       </>
   )

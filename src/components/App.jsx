@@ -70,7 +70,7 @@ function App() {
           <Notice />
         </Route>
 
-        <Route path="/notice-view">
+        <Route path="/notice-view/:id">
           <NoticeView />
         </Route>
 
