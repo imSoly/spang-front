@@ -1,25 +1,22 @@
-import axios from 'axios';
-import dotenv from 'dotenv';
+import axios from "axios";
+import dotenv from "dotenv";
 
-dotenv.config()
+dotenv.config();
 
-axios.defaults.baseURL = "https://sipang.herokuapp.com/";
-axios.defaults.withCredentials = true;
+// axios.defaults.baseURL = "https://sipang.herokuapp.com/";
+// axios.defaults.withCredentials = true;
 
-// const instance = axios.create({
-// 	baseURL: process.env.REACT_APP_URl
-// })
+const instance = axios.create({
+  baseURL: process.env.REACT_APP_URL,
+});
 
 function signUpUser(payload) {
-  return axios.post('/user', payload)
-} 
-
-function loginUser(payload) {
-  return axios.post('/user/login', payload)
+  return instance.post("/user", payload);
 }
 
-function getUser() {
-  return axios.get('/user')
+function signInUser(payload) {
+  // function loginUser(payload) {
+  return instance.post("/user/login", payload);
 }
 
 function searchGym(payload) {
@@ -72,3 +69,10 @@ export {
   noticeCommentOneFatch,
   noticeCommentUpdateOne
    }
+
+// function getUser() {
+//   return instance.get("/user");
+// }
+
+export { signUpUser, signInUser };
+

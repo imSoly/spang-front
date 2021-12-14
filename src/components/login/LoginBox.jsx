@@ -1,80 +1,88 @@
-import React, { useState, useHistory, useEffect } from "react";
-import { Link } from "react-router-dom";
-import "css/Login.css";
+import React, { useCallback, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { signInUser } from "api";
 import NaverLoginButton from "./NaverLoginButton";
 import GoogleLoginButton from "./GoogleLoginButton";
 import KakaoLoginButton from "./KakaoLoginButton";
-// import axios from "axios";
+import useInput from "hooks/useInput";
 
 function LoginBox() {
-  const [mode, setMode] = useState("login");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, onChanedEmail, setEmail] = useInput("");
+  const [pw, onChanedPw, setPw] = useInput("");
 
-  // useEffect(() => {
-  //   axios
-  //     .post("/api", {
-  //       id: "bla",
-  //       pw: 1234,
-  //     })
-  //     .then(function (response) {
-  //       console.log("response");
-  //       console.log(response);
-  //     })
-  //     .catch(function (error) {
-  //       console.log("error");
-  //       console.log(error.response.data);
-  //     });
-  // }, []);
+  const onReset = useCallback(() => {
+    setEmail("");
+    setPw("");
+  }, [setEmail, setPw]);
 
-  const onChange = (event) => {
-    const {
-      target: { name, value },
-    } = event;
-    console.log(value);
-    if (name === "email") {
-      setEmail(value);
-    } else if (name === "password") {
-      setPassword(value);
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+
+  const history = useHistory();
+  // console.log("UserContext", UserContext);
+
+  const onSubmitForm = async (e) => {
+    try {
+      e.preventDefault();
+      if (!email || !pw) {
+        alert("모든 값을 정확히 입력해주세요.");
+        return;
+      }
+      const { data } = await signInUser({ email, pw });
+      alert("로그인 되었습니다.");
+      onReset();
+      console.log(data);
+      history.push("/");
+    } catch (error) {
+      console.error(error);
     }
   };
 
-  const onSubmit = (event) => {
-    // reload 막기
-    event.preventDefault();
-    // 넘겨줄 input 보관?
-    const userInput = {
-      email: email,
-      password: password,
-    };
-    /* 로그인 처리, 페이지 이동 */
-    console.log(userInput);
-    // setEmail("");
-    // setPassword("");
-    // console.log(email, password);
-  };
+  // const onChangeEmail = (e) => {
+  //   setEmail(e.target.value);
+  // };
+
+  // const onChangePassword = (e) => {
+  //   setPassword(e.target.value);
+  // };
 
   return (
-    <section className="login_body">
-      <div className="login_box_container">
-        {/* login mode bar */}
-        <div className="login_mode_box">
-          <button
-            onClick={() => {
-              setMode("login");
-            }}
-            style={{ borderRight: "solid 1px #707070" }}
-          >
-            Sign in
-          </button>
-          <button
-            onClick={() => {
-              setMode("join");
-            }}
-          >
-            Sign up
-          </button>
-        </div>
+    <form onSubmit={onSubmitForm}>
+      <div className="login_box">
+        <h1>로그인</h1>
+        <input
+          type="email"
+          placeholder="이메일 주소 입력"
+          value={email}
+          onChange={onChanedEmail}
+          required
+        />
+        <input
+          type="password"
+          placeholder="비밀번호 입력"
+          value={pw}
+          onChange={onChanedPw}
+          required
+        />
+        <section className="social_login_box">
+          <font color="#e4e4e4">또는</font>
+          <ul>
+            <li>
+              <GoogleLoginButton />
+            </li>
+            <li>
+              <NaverLoginButton />
+            </li>
+            <li>
+              <KakaoLoginButton />
+            </li>
+          </ul>
+          <p>소셜 네트워크로 로그인하세요.</p>
+        </section>
+        <button className="color_btn" type="submit" onClick={onSubmitForm}>
+          로그인
+        </button>
+
 
         {/* 로그인 모드에 따라 다른 DOM 보여주기 */}
         {mode === "login" ? (
@@ -164,8 +172,16 @@ function LoginBox() {
             </p>
           </div>
         )}
+
+        <p>
+          아직 SPANG계정이 없으신가요? <Link to="/join">가입하기</Link>
+        </p>
+        <p>
+          <Link to="/#">혹시 비밀번호를 잊으셨나요?</Link>
+        </p>
+
       </div>
-    </section>
+    </form>
   );
 }
 
