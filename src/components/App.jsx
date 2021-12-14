@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Route, Switch } from "react-router-dom";
-import { getUser } from "api";
+// import { getUser } from "api";
 import "css/App.css";
 import Header from "components/Header.jsx";
 import Footer from "components/Footer.jsx";
@@ -17,6 +17,8 @@ import MyPage from "components/MyPage.jsx";
 import Community from "components/community/Community.jsx";
 import CommunityView from "components/community/CommunityView.jsx";
 import CommunityWrite from "components/community/CommunityWrite.jsx";
+// import { useUserState } from "store/modules/user";
+// import UserContext from "store/modules/user";
 
 const communityTitle = [
   "배드민턴이 너무 어려워요....",
@@ -33,25 +35,25 @@ const noticeTitle = [
 ];
 
 function App() {
+  // const user = useUserState();
+  // console.log(user);
 
-  const [userInfo, setUserInfo] = useState({})
-  
-  const patchUserInfo = useCallback(
-    async () => {
-      try {
-        const { data } = await getUser()
-        setUserInfo(data)
-        console.log(data);
-      } catch (error) {
-        console.error(error);
-      }
-    },
-    [],
-  )
+  // const [userInfo, setUserInfo] = useState({});
 
-  useEffect(() => {
-    patchUserInfo()
-  }, [userInfo, patchUserInfo])
+  // const patchUserInfo = useCallback(async () => {
+  //   try {
+  //     const { data } = null;
+  //     // const { data } = await getUser();
+  //     setUserInfo(data);
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   patchUserInfo();
+  // }, [userInfo, patchUserInfo]);
 
   return (
     <>
