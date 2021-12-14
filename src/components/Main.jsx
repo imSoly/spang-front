@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+import { patchNoticePost } from '../api';
 import "css/Main.css";
 import GymSearch from "./search/GymSearch";
 
 function Main(props) {
   const rankingData = ["성남체육관", "압구정체육관", "신사체육관"];
   const [ranking, setRanking] = useState(rankingData[0]);
+  const [noticeId, setNoticeId] = useState([]);
+  const [noticeTitle, setNoticeTitle] = useState([]);
+  const [noticeDate, setNoticeDate] = useState([]);
 
   const Ranking = () => {
     useEffect(() => {
@@ -19,6 +23,24 @@ function Main(props) {
 
     return <>{`${rankingData.indexOf(ranking) + 1}. ${ranking}`}</>;
   };
+
+  const noticePost = useCallback(
+    async () => {
+      try {
+        const { data } = await patchNoticePost()
+        setNoticeId(data.map(v => v._id))
+        setNoticeTitle(data.map(v => v.title))
+        setNoticeDate(data.map(v => v.date))
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    [],
+  )
+
+  useEffect(() => {
+    noticePost()
+  }, [noticePost])
 
   return (
     <>
@@ -40,14 +62,14 @@ function Main(props) {
 
       <div>
         <div className="main_box_group">
-          <div className="main_box">체육관</div>
-          <div className="main_box">체육관</div>
-          <div className="main_box">체육관</div>
+          <div className="main_box1">성남 체육관</div>
+          <div className="main_box2">모란 체육관</div>
+          <div className="main_box3">건대 체육관</div>
         </div>
         <div className="main_box_group">
-          <div className="main_box">체육관</div>
-          <div className="main_box">체육관</div>
-          <div className="main_box">체육관</div>
+          <div className="main_box4">천안 체육관</div>
+          <div className="main_box5">신사 체육관</div>
+          <div className="main_box6">논현 체육관</div>
         </div>
       </div>
 
@@ -68,16 +90,18 @@ function Main(props) {
         <div className="main_community">
           <div className="main_community_title">커뮤니티 새글</div>
           <div className="main_squre">
-            {[1, 2, 3, 4].map(function (a, i) {
+            {noticeTitle.map((a, i) => {
               return (
-                <div key={i} className="main_community_content">
-                  <p className="main_community_content_title">
-                    {" "}
-                    <Link to="/community">{props.communityTitle[i]}</Link>
-                  </p>
-                  <p className="main_community_content_time">{i + 1}분 전</p>
-                  <div className="main_line"></div>
-                </div>
+                <>
+                  <div key={i} className="main_community_content">
+                    <p className="main_community_content_title">
+                      {" "}
+                      <Link to={`/notice-view/${ noticeId[i] }`}>{noticeTitle[i]}</Link>
+                    </p>
+                    <p className="main_community_content_time">{noticeDate[i]}</p>
+                    <div className="main_line"></div>
+                  </div>
+                </>
               );
             })}
           </div>

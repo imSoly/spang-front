@@ -131,9 +131,12 @@ function LoginBox() {
           <div className="login_box">
             <h1>회원가입</h1>
             <section className="social_login_box">
-              <button className="color_btn">이메일로 회원가입</button>
+            <button className="color_btn">
+              <Link  to="/#" onClick={console.log('dd')}>이메일로 회원가입하기</Link>
+
+            </button>
               <p>
-                <font color="#e4e4e4">또는</font>
+              <font color="#e4e4e4">또는</font>
               </p>
               <ul>
                 <li>

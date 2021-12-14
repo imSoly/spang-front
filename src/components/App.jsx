@@ -8,6 +8,7 @@ import Main from "components/Main.jsx";
 import Notice from "components/notice/Notice.jsx";
 import NoticeView from "components/notice/NoticeView.jsx";
 import NoticeWrite from "components/notice/NoticeWrite.jsx";
+import NoticeCommentUpdate from "components/notice/NoticeCommentUpdate.jsx";
 import Payment from "components/Payment.jsx";
 import LoginBox from "components/login/LoginBox.jsx";
 import LoginBoxCopy from "components/login/LoginBoxCopy.jsx";
@@ -17,6 +18,7 @@ import MyPage from "components/MyPage.jsx";
 import Community from "components/community/Community.jsx";
 import CommunityView from "components/community/CommunityView.jsx";
 import CommunityWrite from "components/community/CommunityWrite.jsx";
+import PaymentSuccess from "components/PaymentSuccess.jsx";
 
 const communityTitle = [
   "배드민턴이 너무 어려워요....",
@@ -78,6 +80,10 @@ function App() {
           <NoticeWrite />
         </Route>
 
+        <Route path="/notice-comment-update">
+          <NoticeCommentUpdate />
+        </Route>
+
         <Route path="/logins">
           <LoginBox />
         </Route>
@@ -110,6 +116,11 @@ function App() {
         <Route path="/community-write">
           <CommunityWrite />
         </Route>
+
+        <Route path="/payment-success">
+          <PaymentSuccess />
+        </Route>
+        
       </Switch>
 
       <Footer />

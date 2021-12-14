@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import "./SelectTime.css";
 
 const SelectTime = () => {
-  const [startTime, setStartTime] = useState("00:00");
-  const [endTime, setEndTime] = useState("00:00");
+  const [startTime, setStartTime] = useState("10:00");
+  const [endTime, setEndTime] = useState("12:00");
   const [totalTime, setTotalTime] = useState(0);
   return (
     <>
@@ -15,10 +16,10 @@ const SelectTime = () => {
           <input name="endTime" type="text" value={endTime} readOnly />
         </div>
         <h1>
-          총 {parseInt(totalTime / 60)}시간 {parseInt(totalTime % 60)}분
+          총 2시간 {parseInt(totalTime % 60)}분
           예약하시겠습니까?
         </h1>
-        <button className="btn_submit_rez">예약하기</button>
+        <Link to="/payment"><button className="btn_submit_rez">결제하기</button></Link>
       </div>
     </>
   );

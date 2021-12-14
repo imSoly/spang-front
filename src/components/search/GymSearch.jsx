@@ -34,7 +34,12 @@ const GymSearch = () => {
         </form>
       </div>
 
-      {gymRes.map(v => (<div key={v._id}>{v.name}</div>))}
+      {gymRes.map(v => (
+        <>
+          <div key={v._id}>{v.name}</div>
+          <div className="main_line"></div>
+        </>
+      ))}
       
     </>
   )

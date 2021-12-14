@@ -56,14 +56,89 @@
     gap: 1rem;
   }
   
-  .main_box {
+  .main_box1 {
     width: 26.5%;
     line-height: 7em;
     margin: 1em 1.5em 1em 0;
     border-radius: 8px;
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
-    background-color: #000;
+    background-image: url('../asset/img/num1.jpg');
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  .main_box2 {
+    width: 26.5%;
+    line-height: 7em;
+    margin: 1em 1.5em 1em 0;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background-image: url('../asset/img/num2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  .main_box3 {
+    width: 26.5%;
+    line-height: 7em;
+    margin: 1em 1.5em 1em 0;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background-image: url('../asset/img/num3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  .main_box4 {
+    width: 26.5%;
+    line-height: 7em;
+    margin: 1em 1.5em 1em 0;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background-image: url('../asset/img/num4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  .main_box5 {
+    width: 26.5%;
+    line-height: 7em;
+    margin: 1em 1.5em 1em 0;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background-image: url('../asset/img/num5.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  .main_box6 {
+    width: 26.5%;
+    line-height: 7em;
+    margin: 1em 1.5em 1em 0;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background-image: url('../asset/img/num6.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
     font-size: 2rem;
     color: #fff;
     text-align: center;

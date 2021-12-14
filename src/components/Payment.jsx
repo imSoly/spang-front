@@ -1,5 +1,6 @@
 // import { getByDisplayValue } from '@testing-library/dom';
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import "css/Payment.css";
 
 function Payment() {
@@ -41,7 +42,9 @@ function Payment() {
             <input type="checkbox" name="agree" value="agree" />
             예약 이용약관에 동의 하시겠습니까?
           </div>
-          <button className="payment_checkbutton">결제하기</button>
+          <Link to="/payment-success">
+            <button className="payment_checkbutton">결제하기</button>
+          </Link>
         </div>
       </div>
     </>

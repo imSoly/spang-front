@@ -38,4 +38,37 @@ function patchNoticeOnePost(id) {
   return axios.get(`/board/${id}`)
 }
 
-export { signUpUser, loginUser, getUser, searchGym, createNoticePost, patchNoticePost, patchNoticeOnePost }
+function noticeCommentCreate(id, commentInfo) {
+  return axios.post(`/comment/${id}`, commentInfo)
+}
+
+function noticeCommentPost(id) {
+  return axios.get(`/comment/${id}`)
+}
+//---
+function noticeCommentDeleteOne(id) {
+  return axios.delete(`/comment/${id}`)
+}
+
+function noticeCommentOneFatch(id) {
+  return axios.get(`/comment/${id}/one`)
+}
+
+function noticeCommentUpdateOne(id, noticeInfo) {
+  return axios.put(`/comment/${id}/one`, noticeInfo)
+}
+
+export { 
+  signUpUser, 
+  loginUser, 
+  getUser, 
+  searchGym, 
+  createNoticePost, 
+  patchNoticePost, 
+  patchNoticeOnePost,
+  noticeCommentCreate,
+  noticeCommentPost,
+  noticeCommentDeleteOne,
+  noticeCommentOneFatch,
+  noticeCommentUpdateOne
+   }
