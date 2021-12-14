@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Route, Switch } from "react-router-dom";
-// import { getUser } from "api";
+import { getUser } from "api";
 import "css/App.css";
 import Header from "components/Header.jsx";
 import Footer from "components/Footer.jsx";
@@ -20,10 +20,6 @@ import CommunityView from "components/community/CommunityView.jsx";
 import CommunityWrite from "components/community/CommunityWrite.jsx";
 import PaymentSuccess from "components/PaymentSuccess.jsx";
 
-// import { useUserState } from "store/modules/user";
-// import UserContext from "store/modules/user";
-
-
 const communityTitle = [
   "배드민턴이 너무 어려워요....",
   "이 배드민채 어떤가요?",
@@ -39,25 +35,25 @@ const noticeTitle = [
 ];
 
 function App() {
-  // const user = useUserState();
-  // console.log(user);
 
-  // const [userInfo, setUserInfo] = useState({});
+  const [userInfo, setUserInfo] = useState({})
+  
+  const patchUserInfo = useCallback(
+    async () => {
+      try {
+        const { data } = await getUser()
+        setUserInfo(data)
+        console.log(data);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    [],
+  )
 
-  // const patchUserInfo = useCallback(async () => {
-  //   try {
-  //     const { data } = null;
-  //     // const { data } = await getUser();
-  //     setUserInfo(data);
-  //     console.log(data);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   patchUserInfo();
-  // }, [userInfo, patchUserInfo]);
+  useEffect(() => {
+    patchUserInfo()
+  }, [userInfo, patchUserInfo])
 
   return (
     <>
